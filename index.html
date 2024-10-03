@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Aritmética</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        input, select {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Calculadora Aritmética</h1>
+        <input type="number" v-model="num1" placeholder="Número 1">
+        <input type="number" v-model="num2" placeholder="Número 2">
+        
+        <select v-model="operation" @change="calcular">
+            <option value="">Selecione uma operação</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        
+        <div class="result">
+            <strong>Resultado:</strong> {{ result }}
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>     
+</body>
+</html>
